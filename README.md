@@ -4,9 +4,9 @@ Backend base en Spring Boot para la hackathon. Esta versión cubre el **Checkpoi
 
 ## Integrantes
 
-- Nombre completo 1 - Código UTEC
-- Nombre completo 2 - Código UTEC
-- Nombre completo 3 - Código UTEC
+- Dávila Segovia, Giancarlo (202510521)
+- Loo Leon, Tommy Bryan (202510241)
+- Cussianovich Monti, Alejandra (202510391)
 
 ## Tecnologías
 
