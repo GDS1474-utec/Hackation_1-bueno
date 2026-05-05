@@ -1,0 +1,87 @@
+{
+  "info": {
+    "name": "TropelCare Checkpoints 1-4",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET guardians",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/guardians"
+      }
+    },
+    {
+      "name": "POST sector",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sectorCode\":\"SECTOR-100\",\"climate\":\"RETRO_ARCADE\",\"capacity\":3}"
+        },
+        "url": "http://localhost:8080/api/v1/sectors"
+      }
+    },
+    {
+      "name": "POST tropel",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"BipBop100\",\"species\":\"GLITCHY\",\"sectorId\":1,\"guardianId\":1}"
+        },
+        "url": "http://localhost:8080/api/v1/tropels"
+      }
+    },
+    {
+      "name": "POST signal hambre",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"tropelId\":1,\"guardianId\":1,\"senderTag\":\"sensor-norte-7\",\"rawContent\":\"BipBop lleva 3 ciclos sin recibir nutrientes y ha empezado a morder los bordes del sector digital.\"}"
+        },
+        "url": "http://localhost:8080/api/v1/signals"
+      }
+    },
+    {
+      "name": "GET care response",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/signals/1/care-response"
+      }
+    },
+    {
+      "name": "GET notifications",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/signals/1/notifications"
+      }
+    },
+    {
+      "name": "GET signals filter",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/signals?signalType=HAMBRE&page=0&size=10"
+      }
+    }
+  ]
+}
