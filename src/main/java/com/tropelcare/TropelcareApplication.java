@@ -1,0 +1,11 @@
+package com.tropelcare;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class TropelcareApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(TropelcareApplication.class, args);
+    }
+}
